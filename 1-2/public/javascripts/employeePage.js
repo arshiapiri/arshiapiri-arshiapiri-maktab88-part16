@@ -1,4 +1,4 @@
-const headers = ["firstName", "lastName","dateOfBirth","gender","phoneNumber","nationalCode","company","roleInCompany"]
+const headers = ["fristName", "lastName","dateOfBirth","gender"," companyName","province"]
 
 $(() => {
     $.get("/employee/all", (data) => {
@@ -22,7 +22,6 @@ $(() => {
         };
 
         $.post("/employee", newEmployee, (data) => {
-            console.log(data);
             $("table tbody").append("<tr></tr>")
 
             for (const key in data) {
